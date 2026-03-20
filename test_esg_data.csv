@@ -1,0 +1,16 @@
+company,carbon_emissions,energy_usage,employee_satisfaction,diversity_score,board_independence,ethics_score
+Tesla,40,50,85,78,90,88
+Amazon,75,80,65,60,70,72
+Google,45,55,90,85,88,91
+Microsoft,35,45,92,88,93,95
+Meta,60,70,70,65,75,78
+Apple,50,60,88,82,90,92
+Walmart,85,90,60,55,65,68
+Netflix,55,65,75,70,80,85
+Infosys,30,40,87,80,92,94
+TCS,32,42,85,78,90,93
+Reliance,78,82,68,62,70,75
+Adani,90,88,55,50,60,65
+HDFC,40,50,80,75,88,90
+ICICI,45,55,78,72,85,88
+Wipro,35,45,82,77,89,91
