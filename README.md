@@ -22,12 +22,20 @@ Access the deployed application:
 * Data normalization using Scikit-learn (MinMaxScaler)
 * Company ranking based on ESG scores
 * Risk classification (Low, Medium, High)
+* K-Means clustering for company segmentation
 * Interactive dashboard built with Streamlit
 * CSV upload support for dynamic datasets
-* Filtering based on ESG score thresholds
+* Filtering by ESG score and risk level
 * SQL-based insights using SQLite
-* Export results as CSV
-* Real-time visualizations for comparative analysis
+* Export results as CSV (full and filtered)
+* Real-time visualizations:
+  * ESG score distribution (bar chart)
+  * Risk level distribution (pie chart)
+  * E/S/G score breakdown (bar chart)
+  * Top 5 companies comparison (radar chart)
+  * Industry comparison
+  * Score correlation heatmap
+* Company clustering visualization
 
 ---
 
@@ -96,15 +104,17 @@ The application follows a layered architecture:
 
 ### ESG Score Calculation
 
-* Environmental Score (E): Based on emissions and energy usage (lower is better)
-* Social Score (S): Based on employee satisfaction and diversity
-* Governance Score (G): Based on board independence and ethics
+* Environmental Score (E): Carbon emissions (60%) + Energy usage (40%) - lower is better
+* Social Score (S): Employee satisfaction (60%) + Diversity score (40%)
+* Governance Score (G): Board independence (50%) + Ethics score (50%)
 
 Final ESG Score:
 
-```id="t3ox3u"
+```
 ESG = (E + S + G) / 3
 ```
+
+All scores are normalized to 0-100 scale using MinMaxScaler.
 
 ---
 
@@ -113,6 +123,10 @@ ESG = (E + S + G) / 3
 * ESG ≥ 75 → Low Risk
 * ESG 50–74 → Medium Risk
 * ESG < 50 → High Risk
+
+### Clustering
+
+K-Means clustering is applied to segment companies into performance groups based on E/S/G scores.
 
 ---
 
